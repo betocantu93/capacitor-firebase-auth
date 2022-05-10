@@ -1,5 +1,5 @@
 import 'firebase/auth';
-
+//@ts-expect-error
 import firebase from 'firebase/app';
 
 import { WebPlugin } from '@capacitor/core';

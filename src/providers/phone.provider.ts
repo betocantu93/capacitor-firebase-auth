@@ -1,3 +1,4 @@
+//@ts-expect-error
 import firebase from 'firebase/app';
 
 import { PhoneSignInResult, SignInOptions } from '../definitions';

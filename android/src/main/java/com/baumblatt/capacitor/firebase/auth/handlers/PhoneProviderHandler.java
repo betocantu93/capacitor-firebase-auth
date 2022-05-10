@@ -3,7 +3,7 @@ package com.baumblatt.capacitor.firebase.auth.handlers;
 import android.content.Intent;
 import android.util.Log;
 
-import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
+import com.baumblatt.capacitor.firebase.auth.BengalaCapacitorFirebaseAuth;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PluginCall;
 import com.google.firebase.FirebaseException;
@@ -24,10 +24,10 @@ public class PhoneProviderHandler implements ProviderHandler {
     private PhoneAuthProvider.ForceResendingToken mResendToken;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
-    private CapacitorFirebaseAuth plugin;
+    private BengalaCapacitorFirebaseAuth plugin;
 
     @Override
-    public void init(final CapacitorFirebaseAuth plugin) {
+    public void init(final BengalaCapacitorFirebaseAuth plugin) {
         this.plugin = plugin;
 
         this.mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {

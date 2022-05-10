@@ -10,10 +10,10 @@ class AppleProviderHandler: NSObject, ProviderHandler  {
 
     
     
-    var plugin: CapacitorFirebaseAuth? = nil
+    var plugin: BengalaCapacitorFirebaseAuth? = nil
     var currentNonce: String?
     
-    func initialize(plugin: CapacitorFirebaseAuth) {
+    func initialize(plugin: BengalaCapacitorFirebaseAuth) {
         print("Initializing Google Provider Handler")
         
         self.plugin = plugin

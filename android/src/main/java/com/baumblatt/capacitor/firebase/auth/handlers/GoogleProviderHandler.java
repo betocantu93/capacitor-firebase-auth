@@ -5,7 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
+import com.baumblatt.capacitor.firebase.auth.BengalaCapacitorFirebaseAuth;
 import com.baumblatt.capacitor.firebase.auth.R;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PluginCall;
@@ -25,17 +25,17 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 import com.auth0.android.jwt.JWT;
 
-import static com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth.CONFIG_KEY_PREFIX;
+import static com.baumblatt.capacitor.firebase.auth.BengalaCapacitorFirebaseAuth.CONFIG_KEY_PREFIX;
 
 public class GoogleProviderHandler implements ProviderHandler {
     public static final int RC_GOOGLE_SIGN_IN = 9001;
     private static final String GOOGLE_TAG = "GoogleProviderHandler";
 
-    private CapacitorFirebaseAuth plugin;
+    private BengalaCapacitorFirebaseAuth plugin;
     private GoogleSignInClient mGoogleSignInClient;
 
     @Override
-    public void init(CapacitorFirebaseAuth plugin) {
+    public void init(BengalaCapacitorFirebaseAuth plugin) {
         this.plugin = plugin;
 
         String[] permissions = this.plugin.getConfig().getArray(CONFIG_KEY_PREFIX + "permissions.google", new String[0]);

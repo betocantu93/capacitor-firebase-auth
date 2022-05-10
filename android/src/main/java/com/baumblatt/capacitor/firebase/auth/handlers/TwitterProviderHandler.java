@@ -5,7 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
+import com.baumblatt.capacitor.firebase.auth.BengalaCapacitorFirebaseAuth;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PluginCall;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,15 +23,15 @@ public class TwitterProviderHandler implements ProviderHandler, OnSuccessListene
     private static final String TWITTER_TAG = "TwitterProviderHandler";
     public static final int RC_TWITTER_SIGN_IN = 9001;
 
-    private CapacitorFirebaseAuth plugin;
+    private BengalaCapacitorFirebaseAuth plugin;
     private FirebaseAuth firebaseAuth;
     private OAuthProvider.Builder provider;
 
     @Override
-    public void init(CapacitorFirebaseAuth plugin) {
+    public void init(BengalaCapacitorFirebaseAuth plugin) {
         this.plugin = plugin;
 
-        String languageCode = this.plugin.getConfig().getString(CapacitorFirebaseAuth.CONFIG_KEY_PREFIX +"languageCode", "en");
+        String languageCode = this.plugin.getConfig().getString(BengalaCapacitorFirebaseAuth.CONFIG_KEY_PREFIX +"languageCode", "en");
 
         this.provider = OAuthProvider.newBuilder("twitter.com");
         this.provider.addCustomParameter("lang", languageCode);

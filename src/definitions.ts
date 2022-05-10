@@ -1,5 +1,6 @@
 import 'firebase/auth';
 
+//@ts-expect-error
 import firebase from 'firebase/app';
 
 export interface SignInResult {

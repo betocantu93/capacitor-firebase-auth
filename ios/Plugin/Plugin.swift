@@ -12,8 +12,8 @@ typealias ProvidersMap = [String:ProviderHandler]
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
  */
-@objc(CapacitorFirebaseAuth)
-public class CapacitorFirebaseAuth: CAPPlugin {
+@objc(BengalaCapacitorFirebaseAuth)
+public class BengalaCapacitorFirebaseAuth: CAPPlugin {
 
     var providersNames: [String] = []
     var languageCode: String = "en"

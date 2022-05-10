@@ -3,7 +3,7 @@ import Capacitor
 import FirebaseAuth
 
 protocol ProviderHandler {
-    func initialize(plugin: CapacitorFirebaseAuth) -> Void
+    func initialize(plugin: BengalaCapacitorFirebaseAuth) -> Void
     func signIn(call: CAPPluginCall) -> Void
     func signOut() throws -> Void
     func isAuthenticated() -> Bool

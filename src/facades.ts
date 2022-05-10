@@ -1,6 +1,6 @@
 import 'firebase/auth';
 import {registerPlugin} from '@capacitor/core';
-
+//@ts-expect-error
 import firebase from 'firebase/app';
 import { Observable, throwError } from 'rxjs';
 
@@ -9,10 +9,10 @@ import {
   PhoneSignInResult, SignInOptions, TwitterSignInResult
 } from './definitions';
 
-export const CapacitorFirebaseAuth = registerPlugin<CapacitorFirebaseAuthPlugin>('CapacitorFirebaseAuth', {
+export const BengalaCapacitorFirebaseAuth = registerPlugin<CapacitorFirebaseAuthPlugin>('BengalaCapacitorFirebaseAuth', {
     web: () => import('./web').then(m => new m.CapacitorFirebaseAuthWeb()),
 });
-const plugin: CapacitorFirebaseAuthPlugin = CapacitorFirebaseAuth;
+const plugin: CapacitorFirebaseAuthPlugin = BengalaCapacitorFirebaseAuth;
 
 /**
  * Call the sign in method on native layer and sign in on web layer with retrieved credentials.

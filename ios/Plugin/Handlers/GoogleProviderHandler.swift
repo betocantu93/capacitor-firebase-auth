@@ -7,10 +7,10 @@ import GoogleSignIn
 
 class GoogleProviderHandler: NSObject, ProviderHandler {
 
-    var plugin: CapacitorFirebaseAuth? = nil
+    var plugin: BengalaCapacitorFirebaseAuth? = nil
     var configuration: GIDConfiguration? = nil
 
-    func initialize(plugin: CapacitorFirebaseAuth) {
+    func initialize(plugin: BengalaCapacitorFirebaseAuth) {
         self.plugin = plugin
         print("Initializing Google Provider Handler")
 

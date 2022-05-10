@@ -4,13 +4,13 @@ import FirebaseAuth
 
 class PhoneNumberProviderHandler: NSObject, ProviderHandler {
 
-    var plugin: CapacitorFirebaseAuth? = nil
+    var plugin: BengalaCapacitorFirebaseAuth? = nil
     var mPhoneNumber: String? = nil
     var mVerificationId: String? = nil
     var mVerificationCode: String? = nil
 
 
-    func initialize(plugin: CapacitorFirebaseAuth) {
+    func initialize(plugin: BengalaCapacitorFirebaseAuth) {
         print("Initializing Phone Number Provider Handler")
         self.plugin = plugin
     }

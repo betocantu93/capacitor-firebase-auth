@@ -1,3 +1,4 @@
+//@ts-expect-error
 import firebase from 'firebase/app';
 import { Observable, pipe, UnaryFunction } from 'rxjs';
 import { map } from 'rxjs/operators';

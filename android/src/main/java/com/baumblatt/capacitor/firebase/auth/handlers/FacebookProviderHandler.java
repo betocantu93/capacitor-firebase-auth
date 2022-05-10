@@ -3,7 +3,7 @@ package com.baumblatt.capacitor.firebase.auth.handlers;
 import android.content.Intent;
 import android.util.Log;
 
-import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
+import com.baumblatt.capacitor.firebase.auth.BengalaCapacitorFirebaseAuth;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -20,13 +20,13 @@ public class FacebookProviderHandler implements ProviderHandler {
     private static final String FACEBOOK_TAG = "FacebookProviderHandler";
     public static final int RC_FACEBOOK_LOGIN = 0xface;
 
-    private CapacitorFirebaseAuth plugin;
+    private BengalaCapacitorFirebaseAuth plugin;
     private CallbackManager mCallbackManager;
     private LoginButton loginButton;
 
 
     @Override
-    public void init(final CapacitorFirebaseAuth plugin) {
+    public void init(final BengalaCapacitorFirebaseAuth plugin) {
         this.plugin = plugin;
 
         try {
